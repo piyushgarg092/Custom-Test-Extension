@@ -1,0 +1,22 @@
+{
+    "name": "Test",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "permissions": ["scripting","activeTab","tabs","audioCapure",
+        "videoCapture",
+        "webRequestBlocking",
+        "webRequest",
+        "storage",
+        "webNavigation"
+    ],
+    "action": {},
+    "background": {
+        "service_worker": "main.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.elitmus.com/*"],
+        "js": ["index.js"]
+      }
+    ]
+}
